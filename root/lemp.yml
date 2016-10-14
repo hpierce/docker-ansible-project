@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - copy: src=/root/site-default dest=/etc/nginx/sites-enabled/default 
+  roles:
+  - geerlingguy.mysql
+  - geerlingguy.nginx
+  - chusiang.php7
+  vars:
+    php_enable_webserver: false
+    mysql_root_password: p@ssw0rd
+    php_owner: www-data
+    php_group: www-data
+
