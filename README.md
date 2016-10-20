@@ -1,8 +1,6 @@
 ## docker-ansible-project
 
-My solution to the problem:
-
-Build a LEMP server on Ubuntu 16.04 using a configuration manager
+Build a LEMP server on Ubuntu 16.04 using Ansible
 
 The following technologies were used:
 
@@ -49,18 +47,4 @@ Example 172.17.0.3
 ``` bash
 root@ansible:/# ansible-playbook /root/lemp.yml -i 172.17.0.3,
 ```
-
-### Install application on client
-If the ip of the client is 172.17.0.2 then you can run this
-``` bash
-root@ansible:/# ansible-playbook /root/app.yml
-```
-
-### Otherwise use that ip address on the command line 
-Example 172.17.0.3
-``` bash
-root@ansible:/# ansible-playbook /root/app.yml -i 172.17.0.3,
-```
-### See results
-Open your browser to http://localhost:8080
 
